@@ -13,13 +13,11 @@ namespace C_Sharp_Bank {
             Console.Write("Haverá depósito inicial (s/n)? ");
             char depositoInicial = char.Parse(Console.ReadLine());
 
-            double saldo;
+            double saldo = 0;
 
-            if (depositoInicial == 's') {
+            if (depositoInicial == 's' || depositoInicial == 'S') {
                 Console.Write("Informe o valor de depósito inicial: R$ ");
                 saldo = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            } else {
-                saldo = 0;
             }
             
             Conta c1 = new Conta(numero, titular, saldo);
